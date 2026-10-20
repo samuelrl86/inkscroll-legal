@@ -1,23 +1,37 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Privacy Policy — InkScroll</title><style>
-  body { margin: 0; font: 16px/1.65 -apple-system, "Segoe UI", Roboto, sans-serif;
-         color: #1a1f2e; background: #f6f7f9; }
-  main { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-  header { border-bottom: 3px solid #6c63ff; padding-bottom: 16px; margin-bottom: 28px; }
-  h1 { font-size: 28px; margin: 0 0 4px; }
-  h2 { font-size: 19px; margin: 32px 0 8px; color: #3d3a7a; }
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Privacy Policy — InkScroll</title><link rel="icon" href="favicon.png" type="image/png"><style>
+  :root { --bg: #0d1117; --card: #1a1f2e; --line: #2a2f3e; --accent: #6c63ff;
+          --text: #e9eaf0; --muted: #9a9db0; --accent-soft: rgba(108,99,255,0.16); }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); }
+  .nav { position: sticky; top: 0; background: rgba(13,17,23,0.92); backdrop-filter: blur(8px);
+         border-bottom: 1px solid var(--line); z-index: 10; }
+  .nav .in { max-width: 980px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center;
+             gap: 18px; flex-wrap: wrap; }
+  .brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none;
+           font-weight: 700; font-size: 18px; margin-right: auto; }
+  .brand img { width: 32px; height: 32px; border-radius: 8px; }
+  .nav a.link { color: var(--muted); text-decoration: none; font-size: 14px; }
+  .nav a.link:hover { color: #fff; }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+  header.doc { border-bottom: 3px solid var(--accent); padding-bottom: 16px; margin-bottom: 28px; }
+  h1 { font-size: 30px; margin: 0 0 4px; color: #fff; }
+  h2 { font-size: 20px; margin: 34px 0 8px; color: #fff; }
   p { margin: 10px 0; }
-  .meta { color: #667; font-size: 14px; }
-  a { color: #6c63ff; }
-  nav a { margin-right: 16px; }
-  .note { background: #eef; border-left: 4px solid #6c63ff; padding: 10px 14px; border-radius: 4px; }
-</style></head><body><main><header><h1>Privacy Policy</h1><p class="meta">InkScroll · Effective 22 September 2026</p><nav><a href="index.html">Home</a><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a href="child-safety.html">Child Safety</a><a href="delete-account.html">Delete Account</a></nav></header><h2>The short version</h2>
+  .meta { color: var(--muted); font-size: 14px; }
+  .note { background: var(--accent-soft); border-left: 4px solid var(--accent); padding: 10px 14px;
+          border-radius: 6px; }
+  footer { max-width: 980px; margin: 0 auto; padding: 24px 20px 40px; color: var(--muted); font-size: 14px;
+           border-top: 1px solid var(--line); }
+</style></head><body><div class="nav"><div class="in"><a class="brand" href="index.html"><img src="icon.png" alt="">InkScroll</a><a class="link" href="terms.html">Terms</a><a class="link" href="privacy.html">Privacy</a><a class="link" href="child-safety.html">Child Safety</a><a class="link" href="delete-account.html">Delete Account</a></div></div><main><header class="doc"><h1>Privacy Policy</h1><p class="meta">InkScroll &middot; Effective 22 September 2026</p></header><h2>The short version</h2>
 <p>We collect what we need to run the app: your account details, what you upload, and who you follow or pay. We do not sell your data. We do not show third-party advertising.</p>
 <p>Questions: support@darkware.us. Effective 22 September 2026.</p>
 <h2>What we collect</h2>
 <p>Account: your email address, username, date of birth (used only to confirm you are 18 or over and to gate sensitive content), password (stored hashed, never in plain text), and optionally a bio, avatar and banner image.</p>
 <p>Content: the comics, pages, journal posts, captions and comments you upload, including the AI disclosure flag you set on them.</p>
 <p>Activity: who you follow, who you subscribe to, what you like, what you comment on, your genre preferences, and your reading and content settings.</p>
-<p>Payments: if you subscribe or tip, we store a Stripe customer identifier and a record of the subscription or tip â€” amount, date, and the creator. We never receive your card number.</p>
+<p>Payments: if you subscribe or tip, we store a Stripe customer identifier and a record of the subscription or tip — amount, date, and the creator. We never receive your card number.</p>
 <p>Creator payouts: if you set up payouts we store a Stripe account identifier and whether Stripe has approved you to receive funds. Your identity documents and bank details go to Stripe directly and are never held by us.</p>
 <p>Device: if you enable notifications, a push token for your device.</p>
 <p>Reports: if you report content, we store the report and what it referred to.</p>
@@ -28,9 +42,9 @@
 <p>To moderate content and enforce the content rules, including meeting our legal reporting obligations.</p>
 <p>To send notifications you have turned on.</p>
 <h2>Who we share it with</h2>
-<p>Supabase â€” hosting, database, authentication and file storage.</p>
-<p>Stripe â€” payments, creator payouts and identity verification. Stripe handles your card and bank details under its own privacy policy.</p>
-<p>Expo â€” push notification delivery, if you enable notifications.</p>
+<p>Supabase — hosting, database, authentication and file storage.</p>
+<p>Stripe — payments, creator payouts and identity verification. Stripe handles your card and bank details under its own privacy policy.</p>
+<p>Expo — push notification delivery, if you enable notifications.</p>
 <p>Law enforcement, where we are legally required to respond, and NCMEC where we are required to report child sexual abuse material.</p>
 <p>We do not sell your personal data, and we do not share it with advertisers.</p>
 <h2>What other people can see</h2>
@@ -56,4 +70,4 @@
 <h2>Children</h2>
 <p>InkScroll is for adults aged 18 and over. We do not knowingly collect data from children. If you believe a child has created an account, contact us and we will remove it.</p>
 <h2>Changes</h2>
-<p>If we make a significant change to this policy we will tell you in the app before it takes effect.</p></main></body></html>
+<p>If we make a significant change to this policy we will tell you in the app before it takes effect.</p></main><footer>&copy; 2026 EZGames LLC &middot; North Carolina, United States &middot; <a href="https://darkware.us">darkware.us</a></footer></body></html>

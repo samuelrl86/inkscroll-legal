@@ -1,55 +1,125 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>EZGames LLC &mdash; makers of InkScroll</title><meta name="description" content="EZGames LLC is an independent app studio in North Carolina, USA, and the maker of InkScroll, a vertical-scrolling webcomics app."><style>
-  body { margin: 0; font: 16px/1.65 -apple-system, "Segoe UI", Roboto, sans-serif;
-         color: #1a1f2e; background: #f6f7f9; }
-  main { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-  header { border-bottom: 3px solid #6c63ff; padding-bottom: 16px; margin-bottom: 28px; }
-  h1 { font-size: 28px; margin: 0 0 4px; }
-  h2 { font-size: 19px; margin: 32px 0 8px; color: #3d3a7a; }
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>EZGames LLC — makers of InkScroll</title><meta name="description" content="EZGames LLC is an independent app studio in North Carolina, USA, and the maker of InkScroll, a vertical-scrolling webcomics app."><link rel="icon" href="favicon.png" type="image/png"><style>
+  :root { --bg: #0d1117; --card: #1a1f2e; --line: #2a2f3e; --accent: #6c63ff;
+          --text: #e9eaf0; --muted: #9a9db0; --accent-soft: rgba(108,99,255,0.16); }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); }
+  .nav { position: sticky; top: 0; background: rgba(13,17,23,0.92); backdrop-filter: blur(8px);
+         border-bottom: 1px solid var(--line); z-index: 10; }
+  .nav .in { max-width: 980px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center;
+             gap: 18px; flex-wrap: wrap; }
+  .brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none;
+           font-weight: 700; font-size: 18px; margin-right: auto; }
+  .brand img { width: 32px; height: 32px; border-radius: 8px; }
+  .nav a.link { color: var(--muted); text-decoration: none; font-size: 14px; }
+  .nav a.link:hover { color: #fff; }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+  header.doc { border-bottom: 3px solid var(--accent); padding-bottom: 16px; margin-bottom: 28px; }
+  h1 { font-size: 30px; margin: 0 0 4px; color: #fff; }
+  h2 { font-size: 20px; margin: 34px 0 8px; color: #fff; }
   p { margin: 10px 0; }
-  .meta { color: #667; font-size: 14px; }
-  a { color: #6c63ff; }
-  nav a { margin-right: 16px; }
-  .note { background: #eef; border-left: 4px solid #6c63ff; padding: 10px 14px; border-radius: 4px; }
+  .meta { color: var(--muted); font-size: 14px; }
+  .note { background: var(--accent-soft); border-left: 4px solid var(--accent); padding: 10px 14px;
+          border-radius: 6px; }
+  footer { max-width: 980px; margin: 0 auto; padding: 24px 20px 40px; color: var(--muted); font-size: 14px;
+           border-top: 1px solid var(--line); }
 
-  .hero { border-bottom: 3px solid #6c63ff; padding-bottom: 24px; margin-bottom: 32px; }
-  .hero h1 { font-size: 34px; }
-  .hero .tag { color: #3d3a7a; font-size: 18px; margin: 4px 0 0; }
-  .card { background: #ffffff; border: 1px solid #e3e4ea; border-radius: 10px; padding: 20px 22px; margin: 16px 0; }
-  .card h3 { margin: 0 0 6px; font-size: 20px; }
-  .pill { display: inline-block; background: #eef; color: #3d3a7a; border-radius: 999px; padding: 2px 10px; font-size: 13px; margin-right: 6px; }
-  .btn { display: inline-block; background: #6c63ff; color: #fff !important; text-decoration: none; padding: 10px 16px; border-radius: 8px; font-weight: 600; margin: 8px 8px 0 0; }
-  .btn.alt { background: #fff; color: #6c63ff !important; border: 1px solid #6c63ff; }
-  footer { margin-top: 48px; color: #667; font-size: 14px; border-top: 1px solid #e3e4ea; padding-top: 16px; }
-</style></head><body><main><header class="hero"><h1>EZGames LLC</h1><p class="tag">An independent app studio in North Carolina, USA</p><p class="meta">darkware.us is the home of EZGames LLC. Reach us at <a href="mailto:support@darkware.us">support@darkware.us</a>.</p></header>
-<h2>What we make</h2>
-<div class="card">
-  <h3>InkScroll</h3>
-  <p><span class="pill">Android &middot; closed beta</span><span class="pill">iPhone &middot; coming soon</span></p>
-  <p>A new way to read webcomics: a full-screen vertical feed you swipe through, like short
-  video &mdash; except every frame is a comic. Double-tap any cover to read the whole issue.
-  Readers follow the creators they like; creators upload series and issues in minutes, page by
-  page or as webtoon strips, and post journal updates to their followers.</p>
-  <p>InkScroll is free during its beta, with no ads. It is built with its first readers and creators,
-  and it ships with reporting, blocking, moderation and an age gate for mature content from day one.</p>
-  <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.inkscroll.app">InkScroll on Google Play</a>
-  <a class="btn alt" href="mailto:support@darkware.us?subject=InkScroll%20beta">Join the beta</a></p>
+  main.home { max-width: 980px; padding-top: 0; }
+  .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 32px; align-items: center;
+          padding: 56px 0 40px; }
+  .hero h1 { font-size: 44px; line-height: 1.1; letter-spacing: -0.5px; }
+  .hero h1 span { color: var(--accent); }
+  .hero .lead { font-size: 18px; color: var(--muted); max-width: 520px; }
+  .by { color: var(--muted); font-size: 14px; margin-top: 18px; }
+  .pills { margin: 14px 0 4px; }
+  .pill { display: inline-block; background: var(--accent-soft); color: #c9c6ff; border-radius: 999px;
+          padding: 4px 12px; font-size: 13px; margin: 0 6px 6px 0; }
+  .btn { display: inline-block; background: var(--accent); color: #fff !important; text-decoration: none;
+         padding: 12px 18px; border-radius: 30px; font-weight: 700; margin: 10px 10px 0 0; }
+  .btn.alt { background: transparent; border: 1px solid var(--accent); color: #fff !important; }
+  .phone { justify-self: center; width: 240px; height: 490px; border-radius: 36px; background: #000;
+           border: 6px solid #2a2f3e; box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 0 1px #111;
+           position: relative; overflow: hidden; }
+  .phone .bar { height: 46px; background: var(--card); display: flex; align-items: center;
+                justify-content: space-between; padding: 0 14px; color: #fff; font-size: 12px; }
+  .phone .cover { position: absolute; top: 46px; bottom: 60px; left: 0; right: 0;
+                  background: linear-gradient(160deg, #6c63ff 0%, #2d2a7a 45%, #0d1117 100%); }
+  .phone .cover .ink { position: absolute; left: 50%; top: 42%; width: 70px; height: 70px;
+                       transform: translate(-50%, -50%); border-radius: 50%; background: #fff; opacity: 0.92; }
+  .phone .cover .ink:before { content: ""; position: absolute; left: 50%; top: -34px; margin-left: -14px;
+                              border-left: 14px solid transparent; border-right: 14px solid transparent;
+                              border-bottom: 44px solid #fff; }
+  .phone .cover .title { position: absolute; left: 14px; right: 14px; bottom: 16px; color: #fff; }
+  .phone .cover .title b { display: block; font-size: 15px; }
+  .phone .cover .title small { color: #c9c6ff; font-size: 11px; }
+  .phone .tabs { position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: var(--card);
+                 border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-around;
+                 color: #888; font-size: 10px; }
+  .phone .tabs .on { color: var(--accent); font-weight: 700; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 8px 0 8px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+  .card h3 { margin: 0 0 8px; font-size: 17px; color: #fff; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .card .ico { width: 36px; height: 36px; border-radius: 10px; background: var(--accent-soft);
+               display: flex; align-items: center; justify-content: center; margin-bottom: 12px; font-size: 18px; }
+  .about { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .about .card p { color: var(--text); }
+  .about .card p.muted { color: var(--muted); }
+  .links a { margin-right: 18px; }
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; padding-top: 32px; }
+    .hero h1 { font-size: 34px; }
+    .phone { width: 210px; height: 430px; }
+    .grid, .about { grid-template-columns: 1fr; }
+  }
+</style></head><body><div class="nav"><div class="in"><a class="brand" href="index.html"><img src="icon.png" alt="">InkScroll</a><a class="link" href="terms.html">Terms</a><a class="link" href="privacy.html">Privacy</a><a class="link" href="child-safety.html">Child Safety</a><a class="link" href="delete-account.html">Delete Account</a></div></div>
+<main class="home">
+<section class="hero">
+  <div>
+    <h1>Webcomics, <span>one swipe</span> at a time.</h1>
+    <p class="lead">InkScroll is a full-screen vertical feed of comics you swipe through like short
+    video &mdash; except every frame is a comic. Double-tap any cover to read the whole issue.</p>
+    <div class="pills"><span class="pill">Android &middot; closed beta</span><span class="pill">iPhone &middot; coming soon</span><span class="pill">Free, no ads</span></div>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.inkscroll.app">Get it on Google Play</a>
+    <a class="btn alt" href="mailto:support@darkware.us?subject=InkScroll%20beta">Join the beta</a>
+    <p class="by">Made by EZGames LLC, an independent app studio in North Carolina, USA.</p>
+  </div>
+  <div class="phone" aria-hidden="true">
+    <div class="bar"><span>&larr;</span><span>&#9679;</span><span>&#9881;</span></div>
+    <div class="cover"><div class="ink"></div>
+      <div class="title"><b>Midnight Courier #3</b><small>by @inkwell &middot; swipe for more</small></div></div>
+    <div class="tabs"><span>Search</span><span>Journal</span><span>Discovery</span><span class="on">Feed</span></div>
+  </div>
+</section>
+
+<h2>Built for both sides of the page</h2>
+<div class="grid">
+  <div class="card"><div class="ico">&#128214;</div><h3>For readers</h3>
+    <p>A feed shaped by the genres you pick. Comics, manga and webtoons each get a reader built for
+    their format. Follow creators, like, comment, and keep up with their journals.</p></div>
+  <div class="card"><div class="ico">&#9999;&#65039;</div><h3>For creators</h3>
+    <p>Upload a series and its issues in minutes, page by page or as a webtoon strip. Post journal
+    updates. Your work is seen full-screen, not in a grid of thumbnails.</p></div>
+  <div class="card"><div class="ico">&#128737;&#65039;</div><h3>Safe by default</h3>
+    <p>Report and block tools everywhere, a moderated Discovery tab, and mature content hidden unless
+    you are 18+ and choose to see it. Built in from day one, not bolted on.</p></div>
 </div>
 
 <h2>About EZGames LLC</h2>
-<p>EZGames LLC is a small, independent studio founded in 2026 and registered in North Carolina.
-We build mobile apps for people who make and share creative work, starting with comics. We publish on
-Google Play and the Apple App Store under the EZGames LLC name.</p>
-
-<h2>Contact</h2>
-<p>Support and general enquiries: <a href="mailto:support@darkware.us">support@darkware.us</a>.
-Account deletion requests: <a href="delete-account.html">delete-account</a>.
-Child safety concerns: see our <a href="child-safety.html">Child Safety Standards</a>.</p>
-
-<h2>Legal</h2>
-<p><a href="terms.html">Terms of Service</a> &middot; <a href="privacy.html">Privacy
-Policy</a> &middot; <a href="child-safety.html">Child Safety Standards</a> &middot;
-<a href="delete-account.html">Delete your account</a></p>
-
-<footer>&copy; 2026 EZGames LLC &middot; North Carolina, United States &middot;
-<a href="https://darkware.us">darkware.us</a></footer>
-</main></body></html>
+<div class="about">
+  <div class="card">
+    <p>EZGames LLC is a small, independent studio founded in 2026 and registered in North Carolina,
+    United States. We build mobile apps for people who make and share creative work, starting with
+    comics. We publish on Google Play and the Apple App Store under the EZGames LLC name.</p>
+    <p class="muted">darkware.us is the home of EZGames LLC.</p>
+  </div>
+  <div class="card">
+    <h3>Contact</h3>
+    <p>Support and general enquiries: <a href="mailto:support@darkware.us">support@darkware.us</a></p>
+    <p>Account deletion: <a href="delete-account.html">request here</a></p>
+    <p>Child safety concerns: <a href="child-safety.html">our standards and contact</a></p>
+    <p class="muted links"><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a></p>
+  </div>
+</div>
+</main><footer>&copy; 2026 EZGames LLC &middot; North Carolina, United States &middot; <a href="https://darkware.us">darkware.us</a></footer></body></html>

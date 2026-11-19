@@ -38,25 +38,22 @@
   .btn { display: inline-block; background: var(--accent); color: #fff !important; text-decoration: none;
          padding: 12px 18px; border-radius: 30px; font-weight: 700; margin: 10px 10px 0 0; }
   .btn.alt { background: transparent; border: 1px solid var(--accent); color: #fff !important; }
-  .phone { justify-self: center; width: 240px; height: 490px; border-radius: 36px; background: #000;
-           border: 6px solid #2a2f3e; box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 0 1px #111;
-           position: relative; overflow: hidden; }
-  .phone .bar { height: 46px; background: var(--card); display: flex; align-items: center;
-                justify-content: space-between; padding: 0 14px; color: #fff; font-size: 12px; }
-  .phone .cover { position: absolute; top: 46px; bottom: 60px; left: 0; right: 0;
-                  background: linear-gradient(160deg, #6c63ff 0%, #2d2a7a 45%, #0d1117 100%); }
-  .phone .cover .ink { position: absolute; left: 50%; top: 42%; width: 70px; height: 70px;
-                       transform: translate(-50%, -50%); border-radius: 50%; background: #fff; opacity: 0.92; }
-  .phone .cover .ink:before { content: ""; position: absolute; left: 50%; top: -34px; margin-left: -14px;
-                              border-left: 14px solid transparent; border-right: 14px solid transparent;
-                              border-bottom: 44px solid #fff; }
-  .phone .cover .title { position: absolute; left: 14px; right: 14px; bottom: 16px; color: #fff; }
-  .phone .cover .title b { display: block; font-size: 15px; }
-  .phone .cover .title small { color: #c9c6ff; font-size: 11px; }
-  .phone .tabs { position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: var(--card);
-                 border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-around;
-                 color: #888; font-size: 10px; }
-  .phone .tabs .on { color: var(--accent); font-weight: 700; }
+  .hero .shot { justify-self: center; width: 270px; max-width: 100%; height: auto; border-radius: 22px;
+                box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 0 1px var(--line); }
+  .stores { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 16px 0 4px; }
+  .stores a { display: inline-block; line-height: 0; }
+  /* Apple's SVG has no padding; Google's PNG has built-in padding, so it is
+     drawn taller and pulled in to look the same size. */
+  .stores img.apple { height: 48px; width: auto; }
+  .stores img.google { height: 70px; width: auto; margin: -11px -10px; }
+  .stores .btn { margin: 0; }
+  .get { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 28px;
+         margin: 40px 0 8px; scroll-margin-top: 80px; }
+  .get h2 { margin-top: 0; }
+  .get .avail { color: var(--muted); font-size: 14px; margin-top: 14px; }
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px;
+           margin-top: 24px; }
+  .shots img { width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); display: block; }
   .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 8px 0 8px; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
   .card h3 { margin: 0 0 8px; font-size: 17px; color: #fff; }
@@ -70,10 +67,12 @@
   @media (max-width: 760px) {
     .hero { grid-template-columns: 1fr; padding-top: 32px; }
     .hero h1 { font-size: 34px; }
-    .phone { width: 210px; height: 430px; }
+    .hero .shot { width: 230px; }
     .grid, .about { grid-template-columns: 1fr; }
+    .get { padding: 20px; }
+    .shots { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   }
-</style></head><body><div class="nav"><div class="in"><a class="brand" href="index.html"><img src="icon.png" alt="">InkScroll</a><a class="link" href="terms.html">Terms</a><a class="link" href="privacy.html">Privacy</a><a class="link" href="copyright.html">Copyright</a><a class="link" href="child-safety.html">Child Safety</a><a class="link" href="delete-account.html">Delete Account</a></div></div>
+</style></head><body><div class="nav"><div class="in"><a class="brand" href="index.html"><img src="icon.png" alt="">InkScroll</a><a class="link" href="index.html#get">Get the app</a><a class="link" href="terms.html">Terms</a><a class="link" href="privacy.html">Privacy</a><a class="link" href="copyright.html">Copyright</a><a class="link" href="child-safety.html">Child Safety</a><a class="link" href="delete-account.html">Delete Account</a></div></div>
 <main class="home">
 <section class="hero">
   <div>
@@ -82,15 +81,10 @@
     who read them. Every comic gets the whole screen, in a vertical feed you swipe through like
     short video &mdash; no grid of tiny thumbnails. Double-tap a cover to read the whole issue.</p>
     <div class="pills"><span class="pill">Android and iPhone</span><span class="pill">Free</span><span class="pill">18+</span></div>
-    <p class="by"><b>Coming soon</b> to Google Play and the App Store.</p>
+    <p class="by"><b>Coming soon</b> to the App Store and Google Play.</p>
     <p class="by">Made by EZGames LLC, an independent app studio in North Carolina, USA.</p>
   </div>
-  <div class="phone" aria-hidden="true">
-    <div class="bar"><span>&larr;</span><span>&#9679;</span><span>&#9881;</span></div>
-    <div class="cover"><div class="ink"></div>
-      <div class="title"><b>Midnight Courier #3</b><small>swipe for more</small></div></div>
-    <div class="tabs"><span>Search</span><span>Journal</span><span>Discovery</span><span class="on">Feed</span></div>
-  </div>
+  <img class="shot" src="img/shot-discovery.jpg" alt="InkScroll Discovery tab: a full-screen comic page with genre filters above it" width="540" height="960">
 </section>
 
 <h2>What InkScroll does</h2>
@@ -105,6 +99,16 @@
     <p>Report and block tools everywhere, people reviewing reports, and mature content hidden unless
     you are 18+ and choose to see it.</p></div>
 </div>
+
+<section class="get" id="get">
+  <h2>Get InkScroll</h2>
+  <p>Free on iPhone and Android. Swipe through indie comics full screen, or post your own: page by
+  page, as a vertical strip, or from a PDF, with links to your own Ko-fi, Patreon or shop on your
+  profile. InkScroll takes no cut, and you keep ownership of your work.</p>
+  <p class="by"><b>Coming soon</b> to the App Store and Google Play.</p>
+  <p class="avail">For ages 18 and over. Not yet available in the European Union or mainland China.</p>
+  <div class="shots"><img src="img/shot-discovery.jpg" alt="InkScroll Discovery tab: a full-screen comic page with genre filters above it" width="540" height="960" loading="lazy"><img src="img/shot-genres.jpg" alt="Browsing indie comics by genre in InkScroll" width="540" height="960" loading="lazy"></div>
+</section>
 
 <h2>Support</h2>
 <div class="about">
